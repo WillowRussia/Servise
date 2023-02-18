@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="108" id="KGk-i7-Jjw" customClass="ServiceTableViewCell" customModule="Services" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="76"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="393" height="76"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RGV-IQ-45C">
+                        <rect key="frame" x="8" y="6.6666666666666661" width="63" height="63"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cKP-p5-cPl">
+                        <rect key="frame" x="95" y="16.666666666666671" width="268" height="43"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="cKP-p5-cPl" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.681934" id="011-E4-qFx"/>
+                    <constraint firstItem="RGV-IQ-45C" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="3DI-JC-swU"/>
+                    <constraint firstItem="RGV-IQ-45C" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="4f5-rb-8tM"/>
+                    <constraint firstItem="cKP-p5-cPl" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="0.565789" id="DFX-U8-TH3"/>
+                    <constraint firstItem="cKP-p5-cPl" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Mjr-m7-Brs"/>
+                    <constraint firstItem="RGV-IQ-45C" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.201018" constant="-16" id="fgb-D1-4WA"/>
+                    <constraint firstItem="RGV-IQ-45C" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="0.828947" id="kln-qC-eO1"/>
+                    <constraint firstItem="cKP-p5-cPl" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="95" id="vLe-TM-gaE"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="logo" destination="RGV-IQ-45C" id="Jaa-wI-p5H"/>
+                <outlet property="title" destination="cKP-p5-cPl" id="UX6-2M-fGo"/>
+            </connections>
+            <point key="canvasLocation" x="217.55725190839695" y="33.098591549295776"/>
+        </tableViewCell>
+    </objects>
+</document>
