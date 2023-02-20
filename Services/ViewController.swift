@@ -21,8 +21,8 @@ class ViewController: UIViewController {
         tableView.dataSource = self
         tableView.register(UINib(nibName: "ServiceTableViewCell", bundle: nil), forCellReuseIdentifier: cellId)
         ParsingJSON { data in
-            self.items = data
             DispatchQueue.main.async {
+                self.items = data
                 self.tableView.reloadData()
             }
         }
@@ -35,9 +35,8 @@ class ViewController: UIViewController {
             guard let data else {return}
             if let ParsingData = try? JSONDecoder().decode(VKServices.self, from: data){
                 completed(ParsingData.items)
-            } else{
-                print("error")}
             }
+        }
         dataTask.resume()
     }
 
@@ -49,7 +48,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cellId", for: indexPath) as! ServiceTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! ServiceTableViewCell
         let items = items[indexPath.row]
         cell.logo.sd_setImage(with: URL( string: items.iconURL))
         cell.title.text = items.name
