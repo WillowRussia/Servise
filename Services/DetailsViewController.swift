@@ -18,6 +18,7 @@ class DetailsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.title = item!.name
         imageView.sd_setImage(with: URL(string: item!.iconURL))
         titleView.text = item!.name
         textView.text = item!.description

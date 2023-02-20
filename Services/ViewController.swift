@@ -28,17 +28,6 @@ class ViewController: UIViewController {
         }
         
     }
-    func ParsingJSON(completed: @escaping ([Item]) -> ()) {
-        let API = "https://mobile-olympiad-trajectory.hb.bizmrg.com/semi-final-data.json"
-        guard let url = URL(string: API) else{print("Ошибка");return}
-        let dataTask = URLSession.shared.dataTask(with: url) { data, response, error in
-            guard let data else {return}
-            if let ParsingData = try? JSONDecoder().decode(VKServices.self, from: data){
-                completed(ParsingData.items)
-            }
-        }
-        dataTask.resume()
-    }
 
 
 }
