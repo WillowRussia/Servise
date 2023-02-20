@@ -35,7 +35,8 @@ class ViewController: UIViewController {
             guard let data else {return}
             if let ParsingData = try? JSONDecoder().decode(VKServices.self, from: data){
                 completed(ParsingData.items)
-                }
+            } else{
+                print("error")}
             }
         dataTask.resume()
     }

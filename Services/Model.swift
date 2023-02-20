@@ -17,4 +17,10 @@ struct Item: Codable {
     let name, description: String
     let iconURL: String
     let serviceURL: String
+    
+    enum CodingKeys: String, CodingKey {
+            case name, description
+            case iconURL = "icon_url"
+            case serviceURL = "service_url"
+        }
 }
