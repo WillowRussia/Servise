@@ -7,13 +7,14 @@
 
 import UIKit
 
-struct VKServices: Decodable {
-    let items: [Items]
-}
-struct Items: Decodable {
-    let name: String
-    let description: String
-    let icon_url: String
-    let service_url: Int
+// MARK: - Welcome
+struct VKServices: Codable {
+    let items: [Item]
 }
 
+// MARK: - Item
+struct Item: Codable {
+    let name, description: String
+    let iconURL: String
+    let serviceURL: String
+}
