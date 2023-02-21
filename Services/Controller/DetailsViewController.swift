@@ -9,7 +9,7 @@ import UIKit
 
 class DetailsViewController: UIViewController {
     
-    var item: Item?
+    var item: API.Item?
 
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var titleView: UILabel!

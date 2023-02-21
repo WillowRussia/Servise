@@ -21,6 +21,8 @@
 		72B3B04829A095B600B7FE38 /* ServiceTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72B3B04629A095B600B7FE38 /* ServiceTableViewCell.xib */; };
 		72B3B04A29A0975300B7FE38 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B3B04929A0975300B7FE38 /* DetailsViewController.swift */; };
 		72B3B04D29A0994200B7FE38 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 72B3B04C29A0994200B7FE38 /* SDWebImage */; };
+		72E34AFD29A37571004FEF0F /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 72E34AFC29A37571004FEF0F /* SDWebImage */; settings = {ATTRIBUTES = (Required, ); }; };
+		72E34AFF29A3757A004FEF0F /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 72E34AFE29A3757A004FEF0F /* SDWebImageMapKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +75,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72E34AFF29A3757A004FEF0F /* SDWebImageMapKit in Frameworks */,
+				72E34AFD29A37571004FEF0F /* SDWebImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,6 +97,7 @@
 				72B3B02829A0906100B7FE38 /* ServicesTests */,
 				72B3B03229A0906200B7FE38 /* ServicesUITests */,
 				72B3B01029A0905F00B7FE38 /* Products */,
+				72E34AFB29A37571004FEF0F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -189,6 +194,13 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		72E34AFB29A37571004FEF0F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -226,6 +238,10 @@
 				72B3B02729A0906100B7FE38 /* PBXTargetDependency */,
 			);
 			name = ServicesTests;
+			packageProductDependencies = (
+				72E34AFC29A37571004FEF0F /* SDWebImage */,
+				72E34AFE29A3757A004FEF0F /* SDWebImageMapKit */,
+			);
 			productName = ServicesTests;
 			productReference = 72B3B02529A0906100B7FE38 /* ServicesTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -693,6 +709,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 72B3B04B29A0994200B7FE38 /* XCRemoteSwiftPackageReference "SDWebImage" */;
 			productName = SDWebImage;
+		};
+		72E34AFC29A37571004FEF0F /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 72B3B04B29A0994200B7FE38 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+		72E34AFE29A3757A004FEF0F /* SDWebImageMapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 72B3B04B29A0994200B7FE38 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImageMapKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

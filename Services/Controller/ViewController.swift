@@ -12,7 +12,9 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
-    var items = [Item]()
+    var items = [API.Item]()
+    var api = API().shared
+    
     let cellId = ServiceTableViewCell.cellId
     
     override func viewDidLoad() {
@@ -20,7 +22,7 @@ class ViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UINib(nibName: "ServiceTableViewCell", bundle: nil), forCellReuseIdentifier: cellId)
-        ParsingJSON { data in
+        api.ParsingJSON { data in
             DispatchQueue.main.async {
                 self.items = data
                 self.tableView.reloadData()
